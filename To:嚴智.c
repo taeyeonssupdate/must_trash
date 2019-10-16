@@ -6,15 +6,13 @@ int main(){
     printf("Please enter a number: "); //要求輸入
     scanf("%d", &number); //掃描輸入
     for (i = 1; i <= number; i++){ //設定i=1 迴圈i+1 當i<=number停止迴圈 >> 三角形部分總共幾行
-        /*
-            %*c *=1 char = *這個字
+        /* %*c *=i char=*這個字
             因迴圈+1
             %1c =*
             %2c = *
             %3c =  *
             %4c =   *
-            %5c =    *
-        */
+            %5c =    *         */
         printf("%*c", i, '*'); //製作左邊三角形對齊線
         for (j = 1; j < i; j++){ //相同方法並套用公式補齊後面字元
             printf("%c", '*');
