@@ -2,7 +2,7 @@
 #include <stdlib.h>
 
 int main(){
-    int i, j, k, l, number;
+    int i, j, k, number;
     printf("Please enter a number: ");
     scanf("%d", &number);
     for (i = 1; i <= number; i++){
@@ -13,24 +13,24 @@ int main(){
             printf("%c", '*');
         }
         if (i <= number){
-            printf("%*c", 2*(number-i)+1, ' ');
+            printf("%*c", 2*(number-i)+3, ' ');
         }
-
-
-
-
-
-
-        printf("\n");
-    }
-    for (k = 1; k <= number; k++){
-        if (k <= number){
-            printf("%*c", 2*(number-k)+1, '*');
+        if (i <= number){
+            printf("%*c", 2*(number-i)+2, '*');
         }
-        for (l = 1; l < k; l++){
+        for (j = 1; j < i; j++){
             printf("%c", '*');
         }
         printf("\n");
+        if (i == number){
+            for (i = 1; i <= number; i++){
+                printf("%*c", number, '*');
+                for (j = 1; j < number+number+4; j++){
+                    printf("%c", '*');
+                }
+                printf("\n");
+            }
+        }
     }
     return 0;
 }
