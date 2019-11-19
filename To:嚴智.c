@@ -19,7 +19,7 @@ int main(){
     }
 
 
-    for (i = 1; i <= number; i++){ //設定i=1 迴圈i+1 當i<=number停止迴圈 >> 三角形部分總共幾行
+    for (i = number; i >= 1; i--){ //設定i=1 迴圈i+1 當i<=number停止迴圈 >> 三角形部分總共幾行
         /* %*c *=i char=*這個字
             因迴圈+1
             %1c =*
