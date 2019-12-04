@@ -3,13 +3,21 @@
 #include <time.h>
 
 int main(void){
-    int i,player1,player2,player1_win_count=0,player2_win_count=0;
-    printf("猜拳遊戲三戰兩勝\n");
-    for (i=1;i<4;i++){
-        printf("第%d局\n",i);
+    int i,j,player1,player2,all_count=0,win_count=0,player1_win_count=0,player2_win_count=0;
+    while (win_count == all_count){
+        printf("請問你要玩幾戰？\n");
+        scanf("%d",&all_count);
+        printf("請問你要玩幾勝？\n");
+        scanf("%d",&win_count);
+        if (win_count > all_count){
+            printf("Error: %d勝%d戰，你是在玩什麼XDD\n請重新輸入\n",win_count,all_count);
+        }
+    }
+    for (i = 0; i < all_count; i++){
+        printf("第%d局\n",i+1);
         player1 = 0; 
         player2 = 0;
-        while (player1 > 3 || player1 < 1){
+        while ((player1 >= 0)&&(player1 <=3)){
             printf("玩家請輸入請輸入: ");
             scanf("%d", &player1);
             fflush(stdin);
@@ -39,15 +47,14 @@ int main(void){
             player1_win_count++;
         }
     }
-    printf("%d比%d ",player1_win_count,player2_win_count);
-    if (((player1_win_count==2)&&(player2_win_count<2))||((player1_win_count==3)&&(player2_win_count<3))){
-        printf("玩家獲勝");
+    if ((player1_win_count==player2_win_count)||(player1_win_count<win_count && player2_win_count<win_count)){
+        printf("平手 比數%d:%d\n",player1_win_count,player2_win_count);
+    } else if (player1_win_count > player2_win_count){
+        printf("玩家贏了，比數%d:%d\n",player1_win_count,player2_win_count);
+    } else if (player1_win_count < player2_win_count){
+        printf("電腦贏了，比數%d:%D\n",player1_win_count,player2_win_count);
     }
-    else if (((player2_win_count==2)&&(player1_win_count<2))||((player2_win_count==3)&&(player1_win_count<3))){
-        printf("電腦獲勝");
-    } else {
-        printf("平手！！");
-    }
+    //和局要繼續比要用函數比較好用=.=
     return 0;
 }
 
