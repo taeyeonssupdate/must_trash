@@ -47,6 +47,13 @@ int main(void){
             printf("玩家出布，電腦出石頭，玩家獲勝。\n");
             p1w++;
         }
+        if (p2w == wc){
+            printf("player2 win first ");
+            break;
+        } else if (p1w == wc){
+            printf("player1 win first ");
+            break;
+        }
         printf("目前比數:%d:%d\n",p1w,p2w);
         if (p1w<wc&&p2w<wc&&i==ac-1){
             printf("和局再一局\n");
