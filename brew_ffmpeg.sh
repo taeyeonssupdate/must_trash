@@ -1,0 +1,30 @@
+brew install varenc/ffmpeg/ffmpeg
+--with-decklink \
+--with-fdk-aac \
+--with-librsvg \
+--with-libsoxr \
+--with-libssh \
+--with-tesseract \
+--with-libvidstab \
+--with-opencore-amr \
+--with-openh264 \
+--with-openjpeg \
+--with-openssl \
+--with-rubberband \
+--with-webp \
+--with-zeromq \
+--with-zimg \
+--with-srt \
+--with-libvmaf \
+--with-libxml2 \
+--with-game-music-emu \
+--with-libbluray \
+--with-libbs2b \
+--with-libcaca \
+--with-libgsm \
+--with-libmodplug \
+--with-rtmpdump \
+--with-speex \
+--with-two-lame \
+--with-wavpack \
+--with-xvid
