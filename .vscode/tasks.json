@@ -3,7 +3,7 @@
     "tasks": [
         {
             "type": "shell",
-            "label": "clang build active file",
+            "label": "clang",
             "command": "/usr/bin/clang",
             "args": [
                 "-g",
@@ -12,15 +12,33 @@
                 "${fileDirname}/debug/${fileBasenameNoExtension}"
             ],
             "options": {
-                "cwd": "/usr/bin/"
+                "cwd": "/usr/bin"
             },
             "problemMatcher": [
                 "$gcc"
             ],
-            // "group": {
-            //     "kind": "build",
-            //     "isDefault": true,
-            // },
+            "group": "build"
+        },
+        {
+            "type": "shell",
+            "label": "clang++",
+            "command": "/usr/bin/clang++",
+            "args": [
+                "-g",
+                "${file}",
+                "-o",
+                "${fileDirname}/debug/${fileBasenameNoExtension}"
+            ],
+            "options": {
+                "cwd": "/usr/bin"
+            },
+            "problemMatcher": [
+                "$gcc"
+            ],
+            "group": {
+                "kind": "build",
+                "isDefault": true
+            }
         }
     ]
 }
