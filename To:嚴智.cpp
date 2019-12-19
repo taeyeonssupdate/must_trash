@@ -8,9 +8,9 @@ int main()
     printf("Please input n: ");
     scanf("%f", &i);
     answer = i;
-    while (i > 0)
+    while (i > 1)
     {
-        while (i != 0 && j < 4)
+        while (i != 1 && j < 4)
         {
             j++;
             if (j == 1)
@@ -33,6 +33,6 @@ int main()
         }
         j = 0;
     }
-    printf("The answer is %f \n", answer);
+    printf("%s%.2f\n", "The number is: ", answer);
     return 0;
 }
