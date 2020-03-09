@@ -1,6 +1,6 @@
 #include <stdio.h>
 #include <stdlib.h>
-int Addition(int,int), minus(int,int), multiply(int,int), divided(int,int);
+int Addition(int, int), minus(int, int), multiply(int, int), divided(int, int), divided2(int,int);
 int main(void){
     int a , b;
     char c;
