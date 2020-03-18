@@ -1,26 +1,25 @@
-import sys
-
 while True:
-    answer = sys.stdin.readline().split('\n')[0].split(' ')
-    for i in range(int(sys.stdin.readline().strip())):
-        input_geust = sys.stdin.readline().strip().split(' ')
-        countA = 0
-        countB = 0
-        existsA = []
-        if input_geust[0] == '':
-            print()
-            continue
-        for j in range(4):
-            if input_geust[j] in existsA:
-                continue
-            if input_geust[j] == answer[j]:
-                countA+=1
-                existsA.append(input_geust[j])
-                continue
-            if input_geust[j] != answer[j]:
-                if input_geust[j] in existsA:
-                    continue
-                else:
-                    if input_geust[j] in answer:
-                        countB+=1
-        print('{}A{}B'.format(countA,countB))
+    try:
+        answer = input().strip().split(' ')
+        if answer[0] == '': continue
+        for _ in range(int(input())):
+            cache = answer.copy()
+            guest = input().strip().split(' ')
+            A = 0
+            for i in range(len(cache)-1,-1,-1):
+                if cache[i] == guest[i]:
+                    cache.pop(i)
+                    guest.pop(i)
+                    A += 1
+            B = 0
+            for i in range(len(cache)):
+                for j in range(len(guest)):
+                    if guest[j] == cache[i]:
+                        B += 1
+                        guest.pop(j)
+                        break
+            print('{}A{}B'.format(A, B))
+    except EOFError:
+        exit(0)
+#100 90 185 120 80 150 140 180 110 150 50
+#100 90 185 120 150 140 110 150 50
