@@ -1,34 +1,20 @@
 #include <stdio.h>
 #include <stdlib.h>
+int fib(int);
 
-int main(){
-    int i, j, x, y;
-    for (i=0;i<10;i++){
-        for (j=10;j>0;j--){
-            if (j>i){
-                printf("*");
-            }
-        }
-        printf("\n");
-    }
-    printf("=======================================================\n");
-    for (i = 0; i < 10; i++){
-        for (j = 10; j > 0; j--){
-            if (j > i){
-                printf(" ");
-            }
-        }
-        for (x = -1; x < 10; x++){
-            if (x < i){
-                printf("*");
-            }
-        }
-        for (y=0;y<=10;y++){
-            if (y<i){
-                printf("*");
-            }
-        }
-        printf("\n");
+int main(void){
+    int n ;
+    for (n=1;n<=10;n++){
+        printf("fib(%d)=%d\n",n,fib(n));
     }
     return 0;
+}
+
+int fib(int n){
+    if(n==1||n==2){
+        return 1;
+    }
+    else{
+        return (fib(n-1)+fib(n-2));
+    }
 }
