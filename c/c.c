@@ -2,7 +2,7 @@
 #define MAX 20
 
 int main(){
-    int i = 0, max = -1, min = -1, sum = 0, list[MAX], cache, y, found;
+    int i = 0, max = -1, min = -1, sum = 0, list[MAX], cache, x, y, found;
     while (i!=MAX){
         printf("第%d次輸入: ",i+1);
         scanf("%d",&list[i]);
@@ -28,19 +28,24 @@ int main(){
             printf("結束查詢\n");
             break;
         }
-        y = 0, found=-1;
-        while (y!=MAX){
-            if (list[y] == cache){
-                found = list[y];
-                break;
+        x = 0, found=0;
+        while (x!=MAX){
+            if (list[x] == cache){
+                y=0;
+                printf("找到了，在第");
+                while (y!=MAX){
+                    if (list[y] == cache){
+                        printf(" %d", y + 1);
+                        found=1;
+                    }
+                    y++;
+                }
+                printf("次輸入\n");
             }
-            y++;
+            x++;
         }
-        if (found == -1){
+        if (!found){
             printf("沒找到\n");
-        }
-        else{
-            printf("找到了，在第%d次輸入\n",y+1);
         }
         i++;
     }
