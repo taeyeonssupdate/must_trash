@@ -2,21 +2,21 @@
 #define MAX 20
 
 int main(){
-    int i = 0, max = -1, min = -1, sum = 0, list[MAX], cache, x, y, found;
+    int i = 0, max, min, sum = 0, list[MAX], cache, x, y, found;
     while (i!=MAX){
         printf("第%d次輸入: ",i+1);
         scanf("%d",&list[i]);
-        if (list[i] == -1){
-            printf("使用完畢\n");
-            break;
-        }
-        if (max == -1 || max < list[i]){
+        if (max < list[i]){
             max = list[i];
         }
-        if (min == -1 || min > list[i]){
+        if (min > list[i]){
             min = list[i];
         }
         sum+=list[i];
+        if (i==0){
+            max=list[i];
+            min=list[i];
+        }
         printf("最大值=%d, 最小值=%d, 總和=%d, 平均數=%d\n", max, min, sum, sum/(i+1));
         i++;
     }
@@ -24,7 +24,7 @@ int main(){
     while (1){
         printf("第%d次輸入: ", i+1);
         scanf("%d", &cache);
-        if (cache == -1){
+        if (cache == 999){
             printf("結束查詢\n");
             break;
         }
