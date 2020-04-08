@@ -1,52 +1,38 @@
 #include <stdio.h>
-#define MAX 20
+#include <stdlib.h>
+#define SIZE 10
+void show(int a[]), bubble(int a[]);
 
-int main(){
-    int i = 0, max, min, sum = 0, list[MAX], cache, x, y, found;
-    while (i!=MAX){
-        printf("第%d次輸入: ",i+1);
-        scanf("%d",&list[i]);
-        if (max < list[i]){
-            max = list[i];
-        }
-        if (min > list[i]){
-            min = list[i];
-        }
-        sum+=list[i];
-        if (i==0){
-            max=list[i];
-            min=list[i];
-        }
-        printf("最大值=%d, 最小值=%d, 總和=%d, 平均數=%d\n", max, min, sum, sum/(i+1));
-        i++;
+int main(void){
+    // int data[SIZE]={26,5,81,7,63};
+    int data[SIZE]={10,9,8,7,6,5,4,3,2,1};
+
+    printf("after...\n");
+    show(data);
+    bubble(data);
+    printf("before...\n");
+    show(data);
+    return 0;
+}
+
+void show(int a[]){
+    int i;
+    for (i=0;i<SIZE;i++){
+        printf("%d ",a[i]);
     }
-    i=0;
-    while (1){
-        printf("第%d次輸入: ", i+1);
-        scanf("%d", &cache);
-        if (cache == 999){
-            printf("結束查詢\n");
-            break;
-        }
-        x = 0, found=0;
-        while (x!=MAX){
-            if (list[x] == cache){
-                y=0;
-                printf("找到了，在第");
-                while (y!=MAX){
-                    if (list[y] == cache){
-                        printf(" %d", y + 1);
-                        found=1;
-                    }
-                    y++;
-                }
-                printf("次輸入\n");
+    printf("\n");
+}
+
+void bubble(int a[]){
+    int i,j,temp;
+    for (i=0;i<9;i++){
+        for (j=9;j>0;j--){
+            if (a[j]<a[j-1]){
+                temp=a[j-1];
+                a[j-1]=a[j];
+                a[j]=temp;
             }
-            x++;
+        show(a);
         }
-        if (!found){
-            printf("沒找到\n");
-        }
-        i++;
     }
 }
