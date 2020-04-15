@@ -1,38 +1,23 @@
 #include <stdio.h>
 #include <stdlib.h>
-#define SIZE 10
-void show(int a[]), bubble(int a[]);
 
-int main(void){
-    // int data[SIZE]={26,5,81,7,63};
-    int data[SIZE]={10,9,8,7,6,5,4,3,2,1};
+int main(viod){
+    int a=5,b=10;
+    int *ptr1,*ptr2;
+    ptr1=&a;
+    ptr2=&b;
+    *ptr1=7;
+    *ptr2=32;
+    a=17;
+    ptr1=ptr2;
+    *ptr1=9;
+    ptr1=&a;
+    a=64;
+    *ptr2=*ptr1+5;
+    ptr2=&a;
+    
+    printf("a=%2d, d=%2d, *ptr1=%2d, *ptr2=%2d\n",a,b,*ptr1,*ptr2);
+    printf("ptr1=%p, ptr2=%p\n",ptr1,ptr2);
 
-    printf("after...\n");
-    show(data);
-    bubble(data);
-    printf("before...\n");
-    show(data);
     return 0;
-}
-
-void show(int a[]){
-    int i;
-    for (i=0;i<SIZE;i++){
-        printf("%d ",a[i]);
-    }
-    printf("\n");
-}
-
-void bubble(int a[]){
-    int i,j,temp;
-    for (i=0;i<9;i++){
-        for (j=9;j>0;j--){
-            if (a[j]<a[j-1]){
-                temp=a[j-1];
-                a[j-1]=a[j];
-                a[j]=temp;
-            }
-        show(a);
-        }
-    }
 }
