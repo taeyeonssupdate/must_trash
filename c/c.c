@@ -1,73 +1,26 @@
 #include <stdio.h>
-#include <stdlib.h>
 
 int main(){
-    int a = 5, b = 10;
-    printf("a=%d, &a=%p\n", a, &a);
-    printf("b=%d, &b=%p\n", b, &b);
-    int *ptr1, *ptr2;
-    printf("a=%d, &a=%p\n", a, &a);
-    printf("b=%d, &b=%p\n", b, &b);
-    printf("&ptr1=%p, ptr1=%p\n", &ptr1, ptr1);
-    printf("&ptr2=%p, ptr2=%p\n", &ptr2, ptr2);
-    ptr1 = &a;
-    printf("a=%d, &a=%p\n", a, &a);
-    printf("b=%d, &b=%p\n", b, &b);
-    printf("&ptr1=%p, ptr1=%p, *ptr1=%d\n", &ptr1, ptr1, *ptr1);
-    printf("&ptr2=%p, ptr2=%p\n", &ptr2, ptr2);
-    ptr2 = &b;
-    printf("a=%d, &a=%p\n", a, &a);
-    printf("b=%d, &b=%p\n", b, &b);
-    printf("&ptr1=%p, ptr1=%p, *ptr1=%d\n", &ptr1, ptr1, *ptr1);
-    printf("&ptr2=%p, ptr2=%p, *ptr2=%d\n", &ptr2, ptr2, *ptr2);
-    *ptr1 = 7;
-    printf("a=%d, &a=%p\n", a, &a);
-    printf("b=%d, &b=%p\n", b, &b);
-    printf("&ptr1=%p, ptr1=%p, *ptr1=%d\n", &ptr1, ptr1, *ptr1);
-    printf("&ptr2=%p, ptr2=%p, *ptr2=%d\n", &ptr2, ptr2, *ptr2);
-    *ptr2 = 32;
-    printf("a=%d, &a=%p\n", a, &a);
-    printf("b=%d, &b=%p\n", b, &b);
-    printf("&ptr1=%p, ptr1=%p, *ptr1=%d\n", &ptr1, ptr1, *ptr1);
-    printf("&ptr2=%p, ptr2=%p, *ptr2=%d\n", &ptr2, ptr2, *ptr2);
-    a = 17;
-    printf("a=%d, &a=%p\n", a, &a);
-    printf("b=%d, &b=%p\n", b, &b);
-    printf("&ptr1=%p, ptr1=%p, *ptr1=%d\n", &ptr1, ptr1, *ptr1);
-    printf("&ptr2=%p, ptr2=%p, *ptr2=%d\n", &ptr2, ptr2, *ptr2);
-    ptr1 = ptr2;
-    printf("a=%d, &a=%p\n", a, &a);
-    printf("b=%d, &b=%p\n", b, &b);
-    printf("&ptr1=%p, ptr1=%p, *ptr1=%d\n", &ptr1, ptr1, *ptr1);
-    printf("&ptr2=%p, ptr2=%p, *ptr2=%d\n", &ptr2, ptr2, *ptr2);
-    *ptr1 = 9;
-    printf("a=%d, &a=%p\n", a, &a);
-    printf("b=%d, &b=%p\n", b, &b);
-    printf("&ptr1=%p, ptr1=%p, *ptr1=%d\n", &ptr1, ptr1, *ptr1);
-    printf("&ptr2=%p, ptr2=%p, *ptr2=%d\n", &ptr2, ptr2, *ptr2);
-    ptr1 = &a;
-    printf("a=%d, &a=%p\n", a, &a);
-    printf("b=%d, &b=%p\n", b, &b);
-    printf("&ptr1=%p, ptr1=%p, *ptr1=%d\n", &ptr1, ptr1, *ptr1);
-    printf("&ptr2=%p, ptr2=%p, *ptr2=%d\n", &ptr2, ptr2, *ptr2);
-    a = 64;
-    printf("a=%d, &a=%p\n", a, &a);
-    printf("b=%d, &b=%p\n", b, &b);
-    printf("&ptr1=%p, ptr1=%p, *ptr1=%d\n", &ptr1, ptr1, *ptr1);
-    printf("&ptr2=%p, ptr2=%p, *ptr2=%d\n", &ptr2, ptr2, *ptr2);
-    *ptr2 = *ptr1 + 5;
-    printf("a=%d, &a=%p\n", a, &a);
-    printf("b=%d, &b=%p\n", b, &b);
-    printf("&ptr1=%p, ptr1=%p, *ptr1=%d\n", &ptr1, ptr1, *ptr1);
-    printf("&ptr2=%p, ptr2=%p, *ptr2=%d\n", &ptr2, ptr2, *ptr2);
-    ptr2 = &a;
-    printf("a=%d, &a=%p\n", a, &a);
-    printf("b=%d, &b=%p\n", b, &b);
-    printf("&ptr1=%p, ptr1=%p, *ptr1=%d\n", &ptr1, ptr1, *ptr1);
-    printf("&ptr2=%p, ptr2=%p, *ptr2=%d\n", &ptr2, ptr2, *ptr2);
-    printf("a=%d, &a=%p\n", a, &a);
-    printf("b=%d, &b=%p\n", b, &b);
-    printf("&ptr1=%p, ptr1=%p, *ptr1=%d\n", &ptr1, ptr1, *ptr1);
-    printf("&ptr2=%p, ptr2=%p, *ptr2=%d\n", &ptr2, ptr2, *ptr2);
+    char c[5][20]={"a","b","c","d","e"};
+    int a[3]={5,7,9};
+    int i,sum=0;
+    printf("a=%p\n",a);
+    printf("&a=%p\n",&a);
+    for (i=0;i<3;i++){
+        printf("a[%d]=%d, *(a+%d)=%d\n",i,a,i,&a);
+    }
+    for (i=0;i<3;i++){
+        sum+=*(a+i);
+    }
+    printf("sum=%d\n",sum);
+    int b[3]={4,6,8};
+    sum=0;
+    for (i=0;i<3;i++){
+        sum+=*(b+i);
+    }
+    printf("sum=%d\n",sum);
+    for (i=0;i<5;i++){
+        printf("%s",c[i]);
+    }
     return 0;
 }
