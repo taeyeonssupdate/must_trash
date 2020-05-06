@@ -1,26 +1,21 @@
 #include <stdio.h>
+#include <stdlib.h>
 
+#define ROM 2
+#define COL 3
 int main(){
-    char c[5][20]={"a","b","c","d","e"};
-    int a[3]={5,7,9};
-    int i,sum=0;
-    printf("a=%p\n",a);
-    printf("&a=%p\n",&a);
-    for (i=0;i<3;i++){
-        printf("a[%d]=%d, *(a+%d)=%d\n",i,a,i,&a);
-    }
-    for (i=0;i<3;i++){
-        sum+=*(a+i);
-    }
-    printf("sum=%d\n",sum);
-    int b[3]={4,6,8};
-    sum=0;
-    for (i=0;i<3;i++){
-        sum+=*(b+i);
-    }
-    printf("sum=%d\n",sum);
-    for (i=0;i<5;i++){
-        printf("%s",c[i]);
+    /* code */
+    int i,j;
+    int A[ROM][COL] = {{1,2,3},{5,6,8}};
+    int B[ROM][COL] = {{3,0,2},{3,5,7}};
+
+    printf("Matrix A+B=\n");
+    for(i=0;i<ROM;i++){
+        for (j=0;j<COL;j++){
+            printf("%3d",A[i][j]+B[i][j]);
+            printf("%3d",*(*(A+i)+j))+*(*(B+i)+j);
+        }
+        printf("\n");
     }
     return 0;
 }
