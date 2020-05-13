@@ -1,21 +1,26 @@
 #include <stdio.h>
-#include <stdlib.h>
+#include <string.h>
+#define MAX 2
 
-#define ROM 2
-#define COL 3
+struct student{
+    char n[20];
+    int g;
+};
+
 int main(){
-    /* code */
-    int i,j;
-    int A[ROM][COL] = {{1,2,3},{5,6,8}};
-    int B[ROM][COL] = {{3,0,2},{3,5,7}};
+    struct student arr_student[MAX];
+    int i;
 
-    printf("Matrix A+B=\n");
-    for(i=0;i<ROM;i++){
-        for (j=0;j<COL;j++){
-            printf("%3d",A[i][j]+B[i][j]);
-            printf("%3d",*(*(A+i)+j))+*(*(B+i)+j);
-        }
-        printf("\n");
+    for (i = 0; i < MAX; i++){
+        printf("Please input student name\n");
+        scanf("%s", arr_student[i].n);
+        printf("Please input student grade\n");
+        scanf("%d", &arr_student[i].g);
     }
+    for (i = 0; i < MAX; i++){
+        printf("%s %d\n",arr_student[i].n,arr_student[i].g);
+        printf("%s %d\n",(arr_student+i)->n,(arr_student+i)->g);
+    }
+    system("pause");
     return 0;
 }
