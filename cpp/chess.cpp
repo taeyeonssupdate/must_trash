@@ -54,7 +54,7 @@ int main(){
       sign[0] = 'X';
       sign[1] = 'O';
    }
-
+   
    for (i = 0; i < 9; i++){
       printf("第%d局 ",i+1);
       if (sign[i % 2] == 'X'){
@@ -80,5 +80,6 @@ int main(){
          return 0;
       }
    }
+   printf("平手！");
    return 0;
 }
