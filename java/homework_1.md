@@ -15,7 +15,7 @@
 
 ---
 
-##流程圖
+## 流程圖 ##
 <!-- ```flow
 start=>start: 開始
 out1=>inputoutput: 班級名稱
@@ -30,7 +30,7 @@ start->out1->out2->out3->out4->out5->end
 
 ---
 
-##程式碼
+## 程式碼 ##
 
     /*
         filename:homework_1
