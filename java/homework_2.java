@@ -23,6 +23,6 @@ public class homework_2 {
         System.out.printf("%d+%d=%d\n", x, y, x + y);
         System.out.printf("%d-%d=%d\n", x, y, x - y);
         System.out.printf("%d*%d=%d\n", x, y, x * y);
-        System.out.printf("%d/%d=%d...%d\n", x, y, Math.round((float) x / (float) y),Math.round((float) x % (float) y));
+        System.out.printf("%d/%d=%d...%d\n", x, y, Math.round((float) x / (float) y), Math.round((float) x % (float) y));
     }
 }
