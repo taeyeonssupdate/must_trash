@@ -18,20 +18,19 @@
 <!-- ```flow
 start=>start: 開始
 9=>operation: 引用Scanner類別
-10=>operation: 引用Math類別
 15=>operation: 創建一個scanner
-17=>inputoutput: 要求使用者輸入X(第一個數字)
-18=>inputoutput: 接收使用者輸入下一個整數到X
-19=>inputoutput: 要求使用者輸入Y(第二個數字)
-20=>inputoutput: 接收使用者輸入下一個整數到Y
-21=>inputoutput: 輸出X和Y
-22=>inputoutput: 印出"輸出結果為："
-23=>inputoutput: 輸出加法結果
-24=>inputoutput: 輸出剪法結果
-25=>inputoutput: 輸出成法結果
-26=>inputoutput: 輸出除法結果(包含餘數)
+16=>inputoutput: 要求使用者輸入X(第一個數字)
+17=>inputoutput: 接收使用者輸入下一個整數到X
+18=>inputoutput: 要求使用者輸入Y(第二個數字)
+19=>inputoutput: 接收使用者輸入下一個整數到Y
+20=>inputoutput: 輸出X和Y
+21=>inputoutput: 印出"輸出結果為："
+22=>inputoutput: 輸出加法結果
+23=>inputoutput: 輸出剪法結果
+24=>inputoutput: 輸出成法結果
+25=>inputoutput: 輸出除法結果(包含餘數)
 end=>end: 結束
-start->9->10->15->17->18->19->20->21->22->23->24->25->26->end
+start->9->15->16->17->18->19->20->21->22->23->24->25->end
 ``` -->
 <img src="https://github.com/taeyeonssupdate/zerojudge/blob/master/images/homework_2_flowchart.png?raw=true" width="190">
 
