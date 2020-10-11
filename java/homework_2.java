@@ -7,7 +7,6 @@
     time:2020/10/05
 */
 import java.util.Scanner;
-import java.lang.Math;
 
 public class homework_2 {
     public static void main(String[] args) {
@@ -23,6 +22,6 @@ public class homework_2 {
         System.out.printf("%d+%d=%d\n", x, y, x + y);
         System.out.printf("%d-%d=%d\n", x, y, x - y);
         System.out.printf("%d*%d=%d\n", x, y, x * y);
-        System.out.printf("%d/%d=%d...%d\n", x, y, Math.round((float) x / (float) y), Math.round((float) x % (float) y));
+        System.out.printf("%d/%d=%d...%d\n", x, y, x / y, x % y);
     }
 }
