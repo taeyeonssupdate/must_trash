@@ -1,4 +1,3 @@
-
 /*
     filename:homework_2
     function:input +*-/
