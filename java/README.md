@@ -50,7 +50,7 @@ start->10->12->16->17->18->19->20->21(yes)
 38(yes)->39->40->45
 45->46->end
 ``` -->
-<img src="https://github.com/taeyeonssupdate/zerojudge/blob/master/images/homework_3_flowchart.png?raw=true" width="600">
+<img src="https://github.com/taeyeonssupdate/zerojudge/blob/master/images/homework_3_flowchart.png?raw=true" width="1200">
 
 ---
 
