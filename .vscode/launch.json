@@ -1,35 +1,40 @@
 {
     "version": "0.2.0",
     "configurations": [
-    {
-        "type": "java",
-        "name": "Java Debug (Launch)",
-        "request": "launch",
-        "mainClass": ""
-    },
-    {
-        "name": "Python: Current File",
-        "type": "python",
-        "request": "launch",
-        "program": "${file}",
-        "console": "integratedTerminal"
-    },
-    {
-        "name": "C Debug",
-        "type": "lldb",
-        "request": "launch",
-        "program": "${fileDirname}/debug/${fileBasenameNoExtension}",
-        "args": ["-arg1", "-arg2"],
-        "preLaunchTask": "clang",
-        // "console": "integratedTerminal"
-    },
-    {
-        "name": "C++ Debug",
-        "type": "lldb",
-        "request": "launch",
-        "program": "${fileDirname}/debug/${fileBasenameNoExtension}",
-        "args": ["-arg1", "-arg2"],
-        "preLaunchTask": "clang++",
-        // "console": "integratedTerminal"
-    }]
+        {
+            "type": "java",
+            "name": "Java Debug (Launch)",
+            "request": "launch",
+            "mainClass": ""
+        },
+        {
+            "name": "Python: Current File",
+            "type": "python",
+            "request": "launch",
+            "program": "${file}",
+            "console": "integratedTerminal"
+        },
+        {
+            "name": "C Debug",
+            "type": "lldb",
+            "request": "launch",
+            "program": "${fileDirname}/debug/${fileBasenameNoExtension}",
+            "args": [
+                "-arg1",
+                "-arg2"
+            ],
+            "preLaunchTask": "clang"
+        },
+        {
+            "name": "C++ Debug",
+            "type": "lldb",
+            "request": "launch",
+            "program": "${fileDirname}/debug/${fileBasenameNoExtension}",
+            "args": [
+                "-arg1",
+                "-arg2"
+            ],
+            "preLaunchTask": "clang++"
+        }
+    ]
 }
