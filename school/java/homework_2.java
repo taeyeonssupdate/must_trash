@@ -22,5 +22,6 @@ public class homework_2 {
         System.out.printf("%d-%d=%d\n", x, y, x - y);
         System.out.printf("%d*%d=%d\n", x, y, x * y);
         System.out.printf("%d/%d=%d...%d\n", x, y, x / y, x % y);
+        scanner.close();
     }
 }
