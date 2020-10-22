@@ -10,7 +10,7 @@
 ---
 
 ## 流程圖 #
-```flow
+<!-- ```flow
 start=>start: 開始
 h10=>operation: 此程式的package
 h14=>inputoutput: 印出請依序輸入學號、姓名、中文、英文及數學成績：
@@ -58,8 +58,8 @@ a38(yes)->a39->a40->h19
 a42(yes)->a43->a44->h19
 a46(yes)->a47->a48->h19
 a50(yes)->a51->a52->h19
-```
-<!-- <img src="https://github.com/taeyeonssupdate/zerojudge/blob/master/images/homework_3_flowchart.png?raw=true" width="1200"> -->
+``` -->
+<img src="https://github.com/taeyeonssupdate/zerojudge/blob/master/images/homework_3_flowchart.png?raw=true" width="1200">
 
 ---
 
