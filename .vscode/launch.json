@@ -5,7 +5,6 @@
             "type": "java",
             "name": "Java Debug (Launch)",
             "request": "launch",
-            "mainClass": ""
         },
         {
             "name": "Python: Current File",
