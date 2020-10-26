@@ -98,6 +98,6 @@ start->9->10->14->15->16->17->18->19->20(no)->23(no)->27(no)->31(yes)->32->end
 ---
 ---
 
-第三次作業 https://github.com/taeyeonssupdate/zerojudge/blob/master/school/java/homework_3/homework_3.md
-第二次作業 https://github.com/taeyeonssupdate/zerojudge/blob/master/school/java/homework_2.md
-第一次作業 https://github.com/taeyeonssupdate/zerojudge/blob/master/school/java/homework_1.md
+第三次作業 https://github.com/taeyeonssupdate/zerojudge/blob/master/school/java/homework_3/homework_3.md 
+第二次作業 https://github.com/taeyeonssupdate/zerojudge/blob/master/school/java/homework_2.md 
+第一次作業 https://github.com/taeyeonssupdate/zerojudge/blob/master/school/java/homework_1.md 
