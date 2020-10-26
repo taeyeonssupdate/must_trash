@@ -12,7 +12,8 @@
 ## 流程圖 #
 <!-- ```flow
 start=>start: 開始
-h10=>operation: 此程式的package
+h10=>operation: 輸入homework_3包
+h12=>operation: 輸入scanner
 h14=>inputoutput: 印出請依序輸入學號、姓名、中文、英文及數學成績：
 h15=>operation: 建立類別為Account的物件user
 h16=>inputoutput: 印出您輸入得值為：
@@ -51,7 +52,7 @@ h19=>inputoutput: 印出更改過的值：
 h20=>operation: 印出當前值
 end=>end: 結束
 
-start->h10->h14->h15->h16->h17->h18->h19->h20->end
+start->h10->h12->h14->h15->h16->h17->h18->h19->h20->end
 h18->a31->a33->a34(no)->a38(no)->a42(no)->a46(no)->a50(no)->a54(yes)->a55->a56(right)->a33
 a34(yes)->a35->a36->h19
 a38(yes)->a39->a40->h19
@@ -64,11 +65,11 @@ a50(yes)->a51->a52->h19
 ---
 
 ## 程式碼 ##
-main.java
+homework_3.java
 
     /*
         filename:homework_3.java
-        function:class
+        function:call class
         package:homework_3
 
         author:taeyeonssupdate

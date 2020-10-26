@@ -1,5 +1,4 @@
-# 我就爛 亂寫的 感覺就錯很多 #
-## 僅供參考 ##
+# 僅供參考 #
 資訊工程係  Java 程式設計  第四次作業  
 班級：資工二乙 學號：B08170516   姓名：李知恩  
 
@@ -92,12 +91,3 @@ start->9->10->14->15->16->17->18->19->20(no)->23(no)->27(no)->31(yes)->32->end
             sc.close();
         }
     }
-
----
----
----
----
-
-第三次作業 https://github.com/taeyeonssupdate/zerojudge/blob/master/school/java/homework_3/homework_3.md
-第二次作業 https://github.com/taeyeonssupdate/zerojudge/blob/master/school/java/homework_2.md
-第一次作業 https://github.com/taeyeonssupdate/zerojudge/blob/master/school/java/homework_1.md

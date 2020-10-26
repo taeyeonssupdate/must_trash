@@ -1,6 +1,6 @@
 /*
     filename:homework_3.java
-    function:class
+    function:call class
     package:homework_3
 
     author:taeyeonssupdate
