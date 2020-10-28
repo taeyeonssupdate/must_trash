@@ -1,7 +1,6 @@
 import java.lang.Math;
 import java.util.Scanner;
 import java.util.HashMap;
-import java.util.Hashtable;
 
 public class a013 {
     public static int to_str(String str) {

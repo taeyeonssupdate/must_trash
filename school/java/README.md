@@ -24,21 +24,19 @@ start=>start: 開始
 14=>operation: int 打折的價錢;
 15=>operation: 創建一個Scanner為sc
 16=>inputoutput: 請輸入金額：
-17=>operation: int  str轉換int(金額 sc.nextline);
-18=>inputoutput: 請輸入身份(Ｎ:非會員 Ｂ:一般會員 Ａ:金卡會員)："
+17=>operation: scan money
+18=>inputoutput: 請輸入身份：
 19=>operation: switch (sc.輸入) 
 20=>condition: case "N":
-21=>inputoutput: 因為您是非會員，所以以原價出售%d
+21=>inputoutput: 應付金額%d元
 22=>operation: break;
 23=>condition: case "B":
 24=>operation: money_off = 打折九折;
-25=>inputoutput: 原價為%d元，因為您是一般會員，
-所以幫您打九折，您只需要支付%d元
+25=>inputoutput: 應付金額%d元
 26=>operation: break;
 27=>condition: case "A":
 28=>operation: money_off = 打折八折;
-29=>inputoutput: 原價為%d元，因為您是黃金會員，
-所以幫您打八折，您只需要支付%d元
+29=>inputoutput: 應付金額%d元
 30=>operation: break;
 31=>condition: default:
 32=>inputoutput: 輸入錯誤！請重新執行程式！
@@ -72,19 +70,19 @@ start->9->10->14->15->16->17->18->19->20(no)->23(no)->27(no)->31(yes)->32->end
             int money_off;
             Scanner sc = new Scanner(System.in);
             System.out.printf("請輸入金額：");
-            int money = Integer.parseInt(sc.nextLine());
-            System.out.printf("請輸入身份(Ｎ:非會員 Ｂ:一般會員 Ａ:金卡會員)：");
+            int money = sc.nextInt();
+            System.out.printf("請輸入身份：");
             switch (sc.nextLine()) {
                 case "N":
-                    System.out.printf("因為您是非會員，所以以原價出售%d", money);
+                    System.out.printf("應付金額%d元", money);
                     break;
                 case "B":
                     money_off = Math.round((float)(money * 0.9));
-                    System.out.printf("原價為%d元，因為您是一般會員，幫您打九折，您只需要支付%d元", money, money_off);
+                    System.out.printf("應付金額%d元", money_off);
                     break;
                 case "A":
                     money_off = Math.round((float) (money * 0.8));
-                    System.out.printf("原價為%d元，因為您是黃金會員，幫您打八折，您只需要支付%d元", money, money_off);
+                    System.out.printf("應付金額%d元", money_off);
                     break;
                 default:
                     System.out.println("輸入錯誤！請重新執行程式！");
