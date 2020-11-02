@@ -28,25 +28,23 @@ start=>start: 開始
 18=>inputoutput: 請輸入身份：
 19=>operation: switch (sc.輸入) 
 20=>condition: case "N":
-21=>inputoutput: 應付金額%d元
+21=>operation: money_off = 原價
 22=>operation: break;
 23=>condition: case "B":
 24=>operation: money_off = 打折九折;
-25=>inputoutput: 應付金額%d元
-26=>operation: break;
-27=>condition: case "A":
-28=>operation: money_off = 打折八折;
-29=>inputoutput: 應付金額%d元
-30=>operation: break;
-31=>condition: default:
-32=>inputoutput: 輸入錯誤！請重新執行程式！
+25=>operation: break;
+26=>condition: case "A":
+27=>operation: money_off = 打折八折;
+28=>operation: break;
+29=>condition: default:
+30=>inputoutput: 輸入錯誤！請重新執行程式！
+32=>inputoutput: 應付金額%d元
 34=>operation: sc釋放記憶體;
 end=>end: 結束
-start->9->10->14->15->16->17->18->19->20(no)->23(no)->27(no)->31(yes)->32->end
+start->9->10->14->15->16->17->18->19->20(no)->23(no)->26(no)->29(yes)->30->end
 20(yes)->21->22->end
-23(yes)->24->25->26(right)->end
-27(yes)->28->29->30(right)->end›
-32->end
+23(yes)->24->25->end
+26(yes)->27->28->end
 ``` -->
 <img src="https://github.com/taeyeonssupdate/zerojudge/blob/master/images/homework_4_flowchart.png?raw=true" width="1200">
 
@@ -67,26 +65,25 @@ start->9->10->14->15->16->17->18->19->20(no)->23(no)->27(no)->31(yes)->32->end
 
     public class homework_4 {
         public static void main(String[] args) {
-            int money_off;
+            int money_off = 0;
             Scanner sc = new Scanner(System.in);
             System.out.printf("請輸入金額：");
             int money = sc.nextInt();
             System.out.printf("請輸入身份：");
-            switch (sc.nextLine()) {
+            switch (sc.next()) {
                 case "N":
-                    System.out.printf("應付金額%d元", money);
+                    money_off = money;
                     break;
                 case "B":
-                    money_off = Math.round((float)(money * 0.9));
-                    System.out.printf("應付金額%d元", money_off);
+                    money_off = Math.round((float) (money * 0.9));
                     break;
                 case "A":
                     money_off = Math.round((float) (money * 0.8));
-                    System.out.printf("應付金額%d元", money_off);
                     break;
                 default:
                     System.out.println("輸入錯誤！請重新執行程式！");
-            }
+                }
+            System.out.printf("應付金額%d元", money_off);
             sc.close();
         }
     }
