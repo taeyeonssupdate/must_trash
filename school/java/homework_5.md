@@ -84,13 +84,3 @@ start->11->12(yes)->13(yes)->14(yes)->15->end
             }
         }
     }
-
----
----
----
----
-
-第四次作業 https://github.com/taeyeonssupdate/zerojudge/blob/master/school/java/homework_4.md<br>
-第三次作業 https://github.com/taeyeonssupdate/zerojudge/blob/master/school/java/homework_3/homework_3.md<br>
-第二次作業 https://github.com/taeyeonssupdate/zerojudge/blob/master/school/java/homework_2.md<br>
-第一次作業 https://github.com/taeyeonssupdate/zerojudge/blob/master/school/java/homework_1.md<br>
