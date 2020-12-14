@@ -17,6 +17,7 @@ public class homework_6 {
         System.out.printf("Please Enter M:");
         m = input.nextInt();
         System.out.printf("C(%d,%d)=%d", n, m, C(n, m));
+        input.close();
     }
 
     public static int C(int n, int m) {

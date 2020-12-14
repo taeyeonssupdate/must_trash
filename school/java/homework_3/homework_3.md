@@ -65,90 +65,91 @@ a50(yes)->a51->a52->h19
 ---
 
 ## 程式碼 ##
-homework_3.java
 
-    /*
-        filename:homework_3.java
-        function:call class
-        package:homework_3
+```java
+/*
+    filename:homework_3.java
+    function:call class
+    package:homework_3
 
-        author:taeyeonssupdate
-        time:2020/10/19
-    */
+    author:taeyeonssupdate
+    time:2020/10/19
+*/
 
-    package homework_3; //在homework_3資料夾內的package
+package homework_3; //在homework_3資料夾內的package
 
-    public class homework_3 {
-        public static void main(String[] args) {
-            System.out.println("請依序輸入學號、姓名、中文、英文及數學成績");
-            Account user = new Account(); //建立類別為Account的物件user
-            System.out.println("您輸入得值為：");
-            System.out.printf("number: %s\nname: %s\n中文: %s\n英文: %s\n數學: %s\n", user.number, user.name, user.ch, user.en, user.ma);
-            user.change_value(); //更改數值
-            System.out.println("更改過的值：");
-            System.out.printf("number: %s\nname: %s\n中文: %s\n英文: %s\n數學: %s\n", user.number, user.name, user.ch, user.en, user.ma);
-        }
+public class homework_3 {
+    public static void main(String[] args) {
+        System.out.println("請依序輸入學號、姓名、中文、英文及數學成績");
+        Account user = new Account(); //建立類別為Account的物件user
+        System.out.println("您輸入得值為：");
+        System.out.printf("number: %s\nname: %s\n中文: %s\n英文: %s\n數學: %s\n", user.number, user.name, user.ch, user.en, user.ma);
+        user.change_value(); //更改數值
+        System.out.println("更改過的值：");
+        System.out.printf("number: %s\nname: %s\n中文: %s\n英文: %s\n數學: %s\n", user.number, user.name, user.ch, user.en, user.ma);
     }
+}
 
 Account.java
 
-    /*s
-        filename:Account.java
-        function:Account class
-        package:homework_3
+/*s
+    filename:Account.java
+    function:Account class
+    package:homework_3
 
-        author:taeyeonssupdate
-        time:2020/10/19
-    */
+    author:taeyeonssupdate
+    time:2020/10/19
+*/
 
-    package homework_3; //在homework_3資料夾內的package
+package homework_3; //在homework_3資料夾內的package
 
-    import java.util.Scanner; //載入Scanner類別
+import java.util.Scanner; //載入Scanner類別
 
-    public class Account {
-        // 宣告變數
-        String number, name, ch, en, ma; // 學號、姓名、中文、英文、數學
-        Scanner sc = new Scanner(System.in); //建立一個scanner命名為sc
+public class Account {
+    // 宣告變數
+    String number, name, ch, en, ma; // 學號、姓名、中文、英文、數學
+    Scanner sc = new Scanner(System.in); //建立一個scanner命名為sc
 
-        // 初始化值
-        public Account() {
-            // 用sc輸入變數到各個值
-            number = sc.nextLine();
-            name = sc.nextLine();
-            ch = sc.nextLine();
-            en = sc.nextLine();
-            ma = sc.nextLine();
-        }
+    // 初始化值
+    public Account() {
+        // 用sc輸入變數到各個值
+        number = sc.nextLine();
+        name = sc.nextLine();
+        ch = sc.nextLine();
+        en = sc.nextLine();
+        ma = sc.nextLine();
+    }
 
-        // 更改數值
-        public void change_value() {
-            System.out.println("請輸入哪個值想要改：");
-            // 輸入想要更改得值 給switch 對應到case並用scanner更改指定的值
-            switch (sc.nextLine()) {
-                case "number":
-                    System.out.printf("請輸入值：");
-                    number = sc.nextLine();
-                    return;
-                case "name":
-                    System.out.printf("請輸入值：");
-                    name = sc.nextLine();
-                    return;
-                case "中文":
-                    System.out.printf("請輸入值：");
-                    ch = sc.nextLine();
-                    return;
-                case "英文":
-                    System.out.printf("請輸入值：");
-                    en = sc.nextLine();
-                    return;
-                case "數學":
-                    System.out.printf("請輸入值：");
-                    ma = sc.nextLine();
-                    return;
-                default:
-                    System.out.println("錯誤請重新執行");
-                    change_value();
-                    return;
-            }
+    // 更改數值
+    public void change_value() {
+        System.out.println("請輸入哪個值想要改：");
+        // 輸入想要更改得值 給switch 對應到case並用scanner更改指定的值
+        switch (sc.nextLine()) {
+            case "number":
+                System.out.printf("請輸入值：");
+                number = sc.nextLine();
+                return;
+            case "name":
+                System.out.printf("請輸入值：");
+                name = sc.nextLine();
+                return;
+            case "中文":
+                System.out.printf("請輸入值：");
+                ch = sc.nextLine();
+                return;
+            case "英文":
+                System.out.printf("請輸入值：");
+                en = sc.nextLine();
+                return;
+            case "數學":
+                System.out.printf("請輸入值：");
+                ma = sc.nextLine();
+                return;
+            default:
+                System.out.println("錯誤請重新執行");
+                change_value();
+                return;
         }
     }
+}
+```
