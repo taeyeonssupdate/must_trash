@@ -62,6 +62,7 @@ start->11->12(yes)->13(yes)->14(yes)->15->end
 
 ## 程式碼 ##
 
+```java
     /*
     filename:homework_5
     function:while 
@@ -84,3 +85,4 @@ start->11->12(yes)->13(yes)->14(yes)->15->end
             }
         }
     }
+```

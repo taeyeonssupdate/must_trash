@@ -32,6 +32,7 @@ start->out1->out2->out3->out4->out5->end
 
 ## 程式碼 ##
 
+```java
     /*
         filename:homework_1
         function:print some text
@@ -48,3 +49,4 @@ start->out1->out2->out3->out4->out5->end
             System.out.println("5.id@gmail.com"); //印出e-mail
         }
     }
+```
