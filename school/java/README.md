@@ -53,16 +53,15 @@ public class homework_7 {
     public static void main(String[] args) {
         Scanner sc = new Scanner(System.in);
         System.out.printf("Please input x: ");
-        String x = String.format("%20s", sc.next()).replace(" ", "0");
+        String x = String.format("%20s", sc.next()).replace(" ", "0"); // sc掃入格式為%2s的str並替換空白為0
         System.out.printf("Please input y: ");
-        String y = String.format("%20s", sc.next()).replace(" ", "0");
-        sc.close();
+        String y = String.format("%20s", sc.next()).replace(" ", "0"); // sc掃入格式為%2s的str並替換空白為0
         String answer = "";
         int w = 0;
         for (int i = x.length() - 1; i >= 0; i--) {
-            int c = y.charAt(i) + x.charAt(i) - 96 + w;
-            w = c / 10;
-            answer = (c % 10) + answer;
+            int c = y.charAt(i) + x.charAt(i) - 96 + w; // 數字str-48=char (兩個96)
+            w = c / 10; // 餘數
+            answer = (c % 10) + answer; 
         }
         answer = w + answer;
         System.out.println(answer.replaceFirst("^0+(?!$)", ""));
@@ -75,8 +74,8 @@ public class homework_7 {
 ---
 ---
 
-[第七次作業](https://github.com/taeyeonssupdate/zerojudge/blob/master/school/java/homework_7.md) <br>
-[第六次作業](https://github.com/taeyeonssupdate/zerojudge/blob/master/school/java/homework_5.md) <br>
+[第六次作業](https://github.com/taeyeonssupdate/zerojudge/blob/master/school/java/homework_6.md) <br>
+[第五次作業](https://github.com/taeyeonssupdate/zerojudge/blob/master/school/java/homework_5.md) <br>
 [第四次作業](https://github.com/taeyeonssupdate/zerojudge/blob/master/school/java/homework_4.md) <br>
 [第三次作業](https://github.com/taeyeonssupdate/zerojudge/blob/master/school/java/homework_3/homework_3.md) <br>
 [第二次作業](https://github.com/taeyeonssupdate/zerojudge/blob/master/school/java/homework_2.md) <br>
