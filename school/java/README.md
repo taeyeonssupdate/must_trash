@@ -1,13 +1,12 @@
-# IceCream 亂寫的 錯了就打死他 #<br>
+# 我就爛 亂寫的 感覺就錯很多 #<br>
 ## 僅供參考 ##<br>
-資訊工程係  Java 程式設計  第六次作業<br>
+資訊工程係  Java 程式設計  第七次作業<br>
 班級：資工二乙 學號：B08170516   姓名：李知恩<br>
 
-題目：組合計算：由ｎ個不同元素挑選ｍ個元素的方法數。<br>
-說明：請依下列的遞迴定義來撰寫程式。<br>
-    C(n, m) = C(n-1, m-1) + C(n-1, m)<br>
-    C(n, n) = 1<br>
-    C(n, 0) = 1<br>
+題目：大數運算之加法運算<br>
+說明：<br>
+  1. 輸入二個正整數，輸出此二數相加之結果。<br>
+  2. 此二個正整數之位數由1位至20位。<br>
 
 ---
 
@@ -15,67 +14,60 @@
 
 <!-- ```flow
 start=>start: 開始
-9=>operation: 輸入util內所有物件
-13=>operation: 創建名為input的scanner
-14=>operation: int n, m
-15=>inputoutput: Please Enter N:
-16=>operation: 取N值
-17=>inputoutput: Please Enter M:
-18=>operation: 取M值
-19=>inputoutput: "C(%d,%d)=%d", n, m, C(n, m)
-221=>operation: class C
-222=>operation: class C
-23=>condition: N=M
-24=>operation: 回傳1
-25=>condition: M=0
-26=>operation: 回傳1
-28=>operation: 回傳遞迴C(n-1, m-1) + C(n-1, m)
+13=>operation: 創建sc(scanner)
+14=>inputoutput: Please input x:
+15=>operation: 掃描數入變數套用$20s格式後空白轉乘0到x
+16=>inputoutput: Please input y: 
+17=>operation: 掃描數入變數套用$20s格式後空白轉乘0到y
+18=>operation: String answer = ""
+19=>operation: int w = 0
+20=>condition: for (int i = x.length() - 1; i >= 0; i--) {
+21=>operation: int c = y.charAt(i) + x.charAt(i) - 96 + w;
+22=>operation: w = c / 10
+23=>operation: answer = (c % 10) + answer;
+25=>operation: answer = w + answer;
+26=>inputoutput: answer.replaceFirst("^0+(?!$)", "")
 end=>end: 結束
-start->9->13->14->15->16->17->18->221->19->end
-222->23(no)->25(no)->28->222
-23(yes)->24
-25(yes)->26
+start->13->14->15->16->17->18->19->20(no)->25->26->end
+20(yes)->21->22->25
 ``` -->
 
-<img src="https://github.com/taeyeonssupdate/zerojudge/blob/master/images/homework_61_flowchart.png?raw=true" width="600">
-<img src="https://github.com/taeyeonssupdate/zerojudge/blob/master/images/homework_62_flowchart.png?raw=true" width="600">
+<img src="https://github.com/taeyeonssupdate/zerojudge/blob/master/images/homework_7_flowchart.png?raw=true" width="600">
 
 ---
 
 ## 程式碼 ##
 
 ```java
-    /*
-    filename:homework_6
-    function:Recursion 
+/*
+filename:homework_7
+function:Big number
 
-    author:IceCream
-    time:2020/11/30
-    */
+author:taeyeonssudpate
+time:2020/12/14
+*/
 
-    import java.util.*;
+import java.util.Scanner;
 
-    public class homework_6 {
-        public static void main(String[] args) {
-            Scanner input = new Scanner(System.in);
-            int n, m;
-            System.out.printf("Please Enter N:");
-            n = input.nextInt();
-            System.out.printf("Please Enter M:");
-            m = input.nextInt();
-            System.out.printf("C(%d,%d)=%d", n, m, C(n, m));
+public class homework_7 {
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+        System.out.printf("Please input x: ");
+        String x = String.format("%20s", sc.next()).replace(" ", "0");
+        System.out.printf("Please input y: ");
+        String y = String.format("%20s", sc.next()).replace(" ", "0");
+        sc.close();
+        String answer = "";
+        int w = 0;
+        for (int i = x.length() - 1; i >= 0; i--) {
+            int c = y.charAt(i) + x.charAt(i) - 96 + w;
+            w = c / 10;
+            answer = (c % 10) + answer;
         }
-
-        public static int C(int n, int m) {
-            if (n == m) {
-                return 1; // C(n, n) = 1
-            } else if (m == 0) {
-                return 1; // C(n, 0) = 1
-            }
-            return C(n - 1, m - 1) + C(n - 1, m); //遞迴C(n-1, m-1) + C(n-1, m)
-        }
-
+        answer = w + answer;
+        System.out.println(answer.replaceFirst("^0+(?!$)", ""));
     }
+}
 ```
 
 ---
@@ -83,8 +75,9 @@ start->9->13->14->15->16->17->18->221->19->end
 ---
 ---
 
-第六次作業 https://github.com/taeyeonssupdate/zerojudge/blob/master/school/java/homework_5.md<br>
-第四次作業 https://github.com/taeyeonssupdate/zerojudge/blob/master/school/java/homework_4.md<br>
-第三次作業 https://github.com/taeyeonssupdate/zerojudge/blob/master/school/java/homework_3/homework_3.md<br>
-第二次作業 https://github.com/taeyeonssupdate/zerojudge/blob/master/school/java/homework_2.md<br>
-第一次作業 https://github.com/taeyeonssupdate/zerojudge/blob/master/school/java/homework_1.md<br>
+[第七次作業](https://github.com/taeyeonssupdate/zerojudge/blob/master/school/java/homework_7.md) <br>
+[第六次作業](https://github.com/taeyeonssupdate/zerojudge/blob/master/school/java/homework_5.md) <br>
+[第四次作業](https://github.com/taeyeonssupdate/zerojudge/blob/master/school/java/homework_4.md) <br>
+[第三次作業](https://github.com/taeyeonssupdate/zerojudge/blob/master/school/java/homework_3/homework_3.md) <br>
+[第二次作業](https://github.com/taeyeonssupdate/zerojudge/blob/master/school/java/homework_2.md) <br>
+[第一次作業](https://github.com/taeyeonssupdate/zerojudge/blob/master/school/java/homework_1.md) <br>
