@@ -1,6 +1,6 @@
 # 我就爛 亂寫的 感覺就錯很多 #<br>
 ## 僅供參考 ##<br>
-資訊工程係  Java 程式設計  第六次作業<br>
+資訊工程係  Java 程式設計  第七次作業<br>
 班級：資工二乙 學號：B08170516   姓名：李知恩<br>
 
 題目：大數運算之加法運算<br>
@@ -16,16 +16,16 @@
 start=>start: 開始
 13=>operation: 創建sc(scanner)
 14=>inputoutput: Please input x:
-15=>operation: 掃描數入變數套用$20s格式後空白轉乘0到x
+15=>operation: 掃描到輸入變數套用%20s格式後空白轉成0到x
 16=>inputoutput: Please input y: 
-17=>operation: 掃描數入變數套用$20s格式後空白轉乘0到y
+17=>operation: 掃描到輸入變數套用%20s格式後空白轉成0到y
 18=>operation: String answer = ""
 19=>operation: int w = 0
 20=>condition: for (int i = x.length() - 1; i >= 0; i--) {
-21=>operation: int c = y.charAt(i) + x.charAt(i) - 96 + w;
+21=>operation: int c = y.charAt(i) + x.charAt(i) - 96 + w
 22=>operation: w = c / 10
-23=>operation: answer = (c % 10) + answer;
-25=>operation: answer = w + answer;
+23=>operation: answer = (c % 10) + answer
+25=>operation: answer = w + answer
 26=>inputoutput: answer.replaceFirst("^0+(?!$)", "")
 end=>end: 結束
 start->13->14->15->16->17->18->19->20(no)->25->26->end
