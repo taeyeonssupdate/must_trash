@@ -12,7 +12,7 @@
 ---
 
 ## 流程圖 ##
-### 兩種擇一 ###
+### 三種擇一 ###
 
 <!-- ```flow
 start=>start: 開始
@@ -67,14 +67,41 @@ start->9->14->15->16->17->18(yes)->20->21(yes)->22(yes)->end
 22(no)->25->26(right)->18
 ``` -->
 
+<!-- ```flow
+start=>start: 開始
+9=>operation: import java.util.Scanner
+14=>operation: 創建sc(scanner)
+15=>inputoutput: Input: 
+16=>operation: sc掃入並轉換陣列
+17=>operation: string陣列轉成int陣列
+20=>operation: int x陣列最大值為5
+21=>operation: int j=0
+22=>condition: String k: str[0].split("")
+23=>condition: 把陣列內數字嘗試塞進x
+26=>condition: printf "%d / %d = %d\n", 
+number[0], number[1]
+, number[0] / number[1]
+27=>inputoutput: 正確運行
+28=>operation: ArrayIndexOutOfBoundsException
+29=>inputoutput: 超出陣列
+30=>operation: ArithmeticException
+31=>inputoutput: 除數不能為0
+end=>end: 結束
+start->9->14->15->16->17->20->21->22(yes)->23(yes)->26(yes)->27->end
+22(no)->end
+23(no)->28->29(right)->22
+26(no)->30->31(right)->22
+``` -->
+
 <img src="https://github.com/taeyeonssupdate/zerojudge/blob/master/images/homework_81_flowchart.png?raw=true" width="600">
 <img src="https://github.com/taeyeonssupdate/zerojudge/blob/master/images/homework_82_flowchart.png?raw=true" width="600">
+<img src="https://github.com/taeyeonssupdate/zerojudge/blob/master/images/homework_83_flowchart.png?raw=true" width="600">
 
 ---
 
 ## 程式碼 ##
 
-### 兩種擇一 ###
+### 三種擇一 ###
 ```java
 /*
 filename:homework_8
@@ -143,6 +170,43 @@ public class homework_82 {
             } catch (ArithmeticException e) {
                 System.out.println("除數不能為0");
             }
+        }
+    }
+}
+```
+
+```java
+/*
+filename:homework_83
+function:try catch finally
+
+author:taeyeonssudpate
+time:2020/12/21
+*/
+
+import java.util.Scanner;
+
+public class homework_83 {
+
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in); // create scanner
+        System.out.printf("Input: ");
+        String[] str = sc.nextLine().split("/"); // "12345/10" >> {"12345","10"}
+        int[] number = { Integer.parseInt(str[0]), Integer.parseInt(str[1]) }; // str >> int {12345,10}
+        
+        int[] x = new int[5]; // 固定為5
+        int j = 0;
+        try {
+            for (String k : str[0].split("")) {
+                x[j++] = Integer.parseInt(k); // 嘗試塞入引發陣列錯誤
+            }
+
+            System.out.printf("%d / %d = %d\n", number[0], number[1], number[0] / number[1]); // 除法
+            System.out.println("正確運行");
+        } catch (ArrayIndexOutOfBoundsException e) {
+            System.out.println("超出陣列");
+        } catch (ArithmeticException e) {
+            System.out.println("除數不能為0");
         }
     }
 }
