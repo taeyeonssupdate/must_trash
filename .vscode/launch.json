@@ -17,7 +17,7 @@
             "name": "C Debug",
             "type": "lldb",
             "request": "launch",
-            "program": "${fileDirname}/debug/${fileBasenameNoExtension}",
+            "program": "~/vscode/zerojudge/.vscode/c_debug_cache/${fileBasenameNoExtension}",
             "args": [
                 "-arg1",
                 "-arg2"
@@ -28,7 +28,7 @@
             "name": "C++ Debug",
             "type": "lldb",
             "request": "launch",
-            "program": "${fileDirname}/debug/${fileBasenameNoExtension}",
+            "program": "~/vscode/zerojudge/.vscode/c_debug_cache/${fileBasenameNoExtension}",
             "args": [
                 "-arg1",
                 "-arg2"

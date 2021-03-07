@@ -9,7 +9,7 @@
                 "-g",
                 "${file}",
                 "-o",
-                "${fileDirname}/debug/${fileBasenameNoExtension}"
+                "~/vscode/zerojudge/.vscode/c_debug_cache/${fileBasenameNoExtension}"
             ],
             "options": {
                 "cwd": "/usr/bin"
@@ -27,7 +27,7 @@
                 "-g",
                 "${file}",
                 "-o",
-                "${fileDirname}/debug/${fileBasenameNoExtension}"
+                "~/vscode/zerojudge/.vscode/c_debug_cache/${fileBasenameNoExtension}"
             ],
             "options": {
                 "cwd": "/usr/bin"
