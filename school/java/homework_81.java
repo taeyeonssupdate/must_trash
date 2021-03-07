@@ -26,5 +26,6 @@ public class homework_81 {
                 System.out.println("除數不能為0");
             }
         }
+        if (sc != null) sc.close();
     }
 }

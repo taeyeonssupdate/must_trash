@@ -24,5 +24,6 @@ public class homework_7 {
         }
         answer = w + answer;
         System.out.println(answer.replaceFirst("^0+(?!$)", ""));
+        if (sc != null) sc.close();
     }
 }

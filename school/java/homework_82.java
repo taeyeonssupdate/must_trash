@@ -33,5 +33,6 @@ public class homework_82 {
                 System.out.println("除數不能為0");
             }
         }
+        if (sc != null) sc.close();
     }
 }
