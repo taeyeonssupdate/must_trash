@@ -22,14 +22,14 @@ int main(void)
 
    printf("%p\n", ptr1);
    printf("%p\n", ptr2);
-   printf("%d\n", *ptr1);
-   printf("%d\n", *ptr2);
-   printf("%d\n", a);
+   printf("%2d\n", *ptr1);
+   printf("%2d\n", *ptr2);
+   printf("%2d\n", a);
    printf("%p\n", ptr1);
-   printf("%d\n", *ptr1);
+   printf("%2d\n", *ptr1);
    printf("%p\n", ptr1);
-   printf("%d\n", a);
-   printf("%d\n", *ptr2);
+   printf("%2d\n", a);
+   printf("%2d\n", *ptr2);
    printf("%p\n", ptr2);
 
    system("pause");
