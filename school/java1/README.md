@@ -217,10 +217,10 @@ public class homework_83 {
 ---
 ---
 
-[第七次作業](https://github.com/taeyeonssupdate/zerojudge/blob/master/school/java/homework_7.md) <br>
-[第六次作業](https://github.com/taeyeonssupdate/zerojudge/blob/master/school/java/homework_6.md) <br>
-[第五次作業](https://github.com/taeyeonssupdate/zerojudge/blob/master/school/java/homework_5.md) <br>
-[第四次作業](https://github.com/taeyeonssupdate/zerojudge/blob/master/school/java/homework_4.md) <br>
-[第三次作業](https://github.com/taeyeonssupdate/zerojudge/blob/master/school/java/homework_3/homework_3.md) <br>
-[第二次作業](https://github.com/taeyeonssupdate/zerojudge/blob/master/school/java/homework_2.md) <br>
-[第一次作業](https://github.com/taeyeonssupdate/zerojudge/blob/master/school/java/homework_1.md) <br>
+[第七次作業](https://github.com/taeyeonssupdate/zerojudge/blob/master/school/java1/homework_7.md) <br>
+[第六次作業](https://github.com/taeyeonssupdate/zerojudge/blob/master/school/java1/homework_6.md) <br>
+[第五次作業](https://github.com/taeyeonssupdate/zerojudge/blob/master/school/java1/homework_5.md) <br>
+[第四次作業](https://github.com/taeyeonssupdate/zerojudge/blob/master/school/java1/homework_4.md) <br>
+[第三次作業](https://github.com/taeyeonssupdate/zerojudge/blob/master/school/java1/homework_3/homework_3.md) <br>
+[第二次作業](https://github.com/taeyeonssupdate/zerojudge/blob/master/school/java1/homework_2.md) <br>
+[第一次作業](https://github.com/taeyeonssupdate/zerojudge/blob/master/school/java1/homework_1.md) <br>
