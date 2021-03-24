@@ -21,7 +21,7 @@ int main(void)
     search(&a[0], b);                    /* 呼叫search()函數 */
     printf("陣列的最大值=%02d\n", b[0]); /* 印出陣列的最大值 */
     printf("陣列的最小值=%02d\n", b[1]); /* 印出陣列的最小值 */
-    // system("pause");
+    system("pause");
     return 0;
 }
 void search(int (*arr)[COL], int p[]) /* 自訂函數search() */

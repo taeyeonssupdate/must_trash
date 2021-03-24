@@ -16,6 +16,6 @@ int main(void)
             printf("%3d", *(*(A + i) + j) + *(*(B + i) + j)); /* 計算二陣列相加 */
         printf("\n");
     }
-    // system("pause");
+    system("pause");
     return 0;
 }
