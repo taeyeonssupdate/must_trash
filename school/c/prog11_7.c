@@ -19,6 +19,11 @@ void sort(struct data student[]);
 int main(void)
 {
     int i;
+
+    /*
+        下面的名字、成績改掉就可以了 這是網路上超ㄉ 2ㄏ不要問我
+    */
+
     struct data student[MAX] = {
         {"郭哲安", 80},
         {"古宗弘", 40},
@@ -37,7 +42,7 @@ int main(void)
     printf("\n成績排序:\n");
     sort(student);
 
-    // system("pause");
+    system("pause");
     return 0;
 }
 
