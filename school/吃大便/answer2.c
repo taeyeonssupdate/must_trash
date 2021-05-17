@@ -24,7 +24,7 @@ int main(int argc, char const *argv[])
 
 void output(stud out)
 {
-    printf("%s\n", out.name);
-    printf("%d\n", out.ID);
-    printf("%d\n", out.age);
+    printf("Name: %s\n", out.name);
+    printf("ID: %d\n", out.ID);
+    printf("age: %d\n", out.age);
 }
