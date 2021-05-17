@@ -12,5 +12,6 @@ int main(int argc, char const *argv[])
     {
         printf("%d\n", ptr[i]);
     }
+    system("pause");
     return 0;
 }
