@@ -29,8 +29,8 @@ int main(void)
 
 struct node *createList(int data[], int size)
 {
-    ;
-    for (int i = 0; i < size; i++)
+    int i;
+    for (i = 0; i < size; i++)
     {
         current = (struct node *)malloc(sizeof(struct node));
         current->number = data[i];
