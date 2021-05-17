@@ -18,6 +18,7 @@ int main(int argc, char const *argv[])
     printf("Age: ");
     scanf("%d", &s1.age);
     output(s1);
+    system("pause");
     return 0;
 }
 
