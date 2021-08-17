@@ -1,3 +1,0 @@
-Welcome to the
-world of C language
-I love the C language best!
