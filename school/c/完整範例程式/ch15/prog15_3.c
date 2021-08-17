@@ -7,14 +7,14 @@ int main(void)
 {
    int a;
    a=(89<<1);	/* 將整數89往左移一個位元，然後設定給變數a存放 */
-   
+
    printf("89二進位的值為: ");
    show_binary(89);			/* 顯示數字89的二進位 */   
    printf("左移一個位元後: ");
    show_binary(a);			/* 顯示89左移一個位元後的二進位 */
    printf("左移一個位元後的十進位值為: %d\n",a); 
    
-   system("pause");
+   // system("pause");
    return 0;
 }
 void show_binary(int num)		/* show_binary()函數的定義 */

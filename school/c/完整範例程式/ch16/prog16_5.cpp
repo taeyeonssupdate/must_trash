@@ -2,23 +2,23 @@
 #include <iostream>
 #include <cstdlib>
 using namespace std;
-void show(int);			// show(int)的原型
-void show(double); 		// show(double)的原型
+void show(int);    // show(int)的原型
+void show(double); // show(double)的原型
 int main(void)
 {
-   int a=26;
-   double b=3.14;
-   show(a);				// 傳入整數到show()函數裡
-   show(b); 				// 傳入倍精度浮點數到show()函數裡
-     
+   int a = 26;
+   double b = 3.14;
+   show(a); // 傳入整數到show()函數裡
+   show(b); // 傳入倍精度浮點數到show()函數裡
+
    system("pause");
    return 0;
 }
-void show(int num)   		// show()函數，可接收一個整數
+void show(int num) // show()函數，可接收一個整數
 {
    cout << num << "是一個整數" << endl;
 }
-void show(double num)	// show()函數，可接收一個倍精度浮點數
+void show(double num) // show()函數，可接收一個倍精度浮點數
 {
-   cout<< num << "是一個倍精度浮點數" << endl;
+   cout << num << "是一個倍精度浮點數" << endl;
 }

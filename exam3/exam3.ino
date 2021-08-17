@@ -36,7 +36,7 @@ void setup()
 void loop(){
     if (x == 0) x = 4;
     else  x = 0;
-    for (int i = 0; i < 750; i++){ //750ms 考試會改
+    for (int i = 0; i < 1000; i++){ //750ms 考試會改
         for (int j = 0; j < 4; j++){
             for (int k = 0; k < 4; k++){
                 digitalWrite(com[k], 1); // 防殘影

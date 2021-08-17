@@ -24,7 +24,7 @@ int main(void)
    
    printf("sizeof(tom)=%d\n",sizeof(tom));  /* 印出變數tom的大小 */
   
-   system("pause");
+   // system("pause");
    return 0;
 }
 

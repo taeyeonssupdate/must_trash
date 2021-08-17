@@ -13,7 +13,7 @@ public class Main {
         label.setIcon(icon);
         label.setHorizontalTextPosition(JLabel.CENTER);
         label.setVerticalTextPosition(JLabel.TOP);
-        label.setForeground(Color.green)
+        label.setForeground(Color.green);
 
         JFrame frame = new JFrame();
         frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
