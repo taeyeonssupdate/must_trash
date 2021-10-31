@@ -1,10 +1,18 @@
 # NachOS
 
+使用 Ubuntu 16.04.7 32bit (i386)
+https://releases.ubuntu.com/16.04/
+
+```
+uname -a
+# Linux 4.15.0-45-generic #48~16.04.1-Ubuntu SMP Tue Jan 29 18:03 2019 UTC 2019 i686 i686 i686 GNU/Linux
+```
+
 ### 更新
 
 ```shell
-sudo apt-get update -y
-sudo apt-get install build-essential gcc-multilib g++-multilib -y
+sudo apt-get update -y (可能需要密碼)
+sudo apt-get install build-essential gcc-multilib g++-multilib -y (可能需要密碼)
 ```
 
 ### 安裝
