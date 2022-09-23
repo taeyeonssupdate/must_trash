@@ -36,12 +36,29 @@ def setup(bot):
     bot.add_cog(ping(bot))
 ```
 
-實作範例：
-configparser用來存取設定
-playwright模擬網頁互動
-py-card是discord的第三方api
+##實作範例：
 
+###流程:
 
+- 在 discord 使用斜線指令
+- (這時候伺服器會開啟網頁並抓取驗證碼附圖回傳)
+- 輸入所需資訊 (範例版本需手動回覆驗證碼)
+- 使用者所看到的所有範例流程畫面
+- (伺服器網頁已登入 可以操作網頁網頁也就是取得權限)
+
+<img src="./images/slash_command.png" alt="登入畫面" width="200"/>
+<img src="./images/login.png" alt="登入畫面" width="200"/>
+<img src="./images/form.png" alt="登入畫面" width="200"/>
+<img src="./images/log.png" alt="登入畫面" width="200"/>
+<img src="./images/logged.png" alt="登入畫面" width="200"/><br>
+
+### 程式碼:
+
+configparser 用來存取設定<br>
+playwright 模擬網頁互動<br>
+py-card 是 discord 的第三方 api<br>
+
+我們透過bot啟動後會載入must模組，當使用者下斜線指令會觸發must_login函數，程式就會透過playwright開啟學生資訊系統網頁並回傳一個驗證碼的圖與帳密表單，使用者填完表單且回傳驗證碼後程式會透過playwright接續執行登入的動作
 - bot.py
 
 ```python
