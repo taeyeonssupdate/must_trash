@@ -46,7 +46,7 @@ def setup(bot):
 - 使用者所看到的所有範例流程畫面
 - (伺服器網頁已登入 可以操作網頁網頁也就是取得權限)
 
-<img src="./images/slash_command.png" alt="登入畫面" width="200"/><img src="./images/login.png" alt="登入畫面" width="200"/><img src="./images/form.png" alt="登入畫面" width="200"/><img src="./images/log.png" alt="登入畫面" width="200"/><img src="./images/logged.png" alt="登入畫面" width="200"/><br>
+<img src="./images/slash_command.png" alt="登入畫面" width="250"/><img src="./images/login.png" alt="登入畫面" width="250"/><img src="./images/form.png" alt="登入畫面" width="250"/><img src="./images/log.png" alt="登入畫面" width="250"/><img src="./images/logged.png" alt="登入畫面" width="250"/><br>
 
 ### 程式碼:
 
