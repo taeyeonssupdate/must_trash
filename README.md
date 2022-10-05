@@ -52,7 +52,7 @@ def setup(bot):
 
 configparser 用來存取設定<br>
 playwright 模擬網頁互動<br>
-py-card 是 discord 的第三方 api<br>
+pycord 是 discord 的第三方 api<br>
 
 我們透過bot啟動後會載入must模組，當使用者下斜線指令會觸發must_login函數，程式就會透過playwright開啟學生資訊系統網頁並回傳一個驗證碼的圖與帳密表單，使用者填完表單且回傳驗證碼後程式會透過playwright接續執行登入的動作
 - bot.py
